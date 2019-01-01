@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabMain"
+        android:layout_width="71dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/primary"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/plass"
+       />
+
+    <LinearLayout
+        android:id="@+id/dialog_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/fabMain"
+        app:layout_constraintEnd_toStartOf="@+id/fabMain">
+
+        <TextView
+            android:id="@+id/tv1"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:text="@string/new_question"
+            android:textSize="17sp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_dialog"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:backgroundTint="@color/yellow"
+            app:fabSize="mini"
+            app:srcCompat="@drawable/q"
+            tools:layout_editor_absoluteX="236dp"
+            tools:layout_editor_absoluteY="424dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/dialog_layout"
+        app:layout_constraintEnd_toEndOf="@+id/fabMain">
+
+        <TextView
+            android:id="@+id/tv2"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:textSize="17sp"
+            android:text="@string/ansver_question" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_view_activity"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:backgroundTint="@color/green"
+            android:visibility="visible"
+            app:fabSize="mini"
+            app:srcCompat="@drawable/t"
+            tools:layout_editor_absoluteX="252dp"
+            tools:layout_editor_absoluteY="361dp" />
+    </LinearLayout>
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/result_CallBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="8dp"
+        android:hint="@string/result_callback"
+        android:textColor="#000"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>
